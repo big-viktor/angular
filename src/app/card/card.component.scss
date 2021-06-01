@@ -1,0 +1,30 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.invisible{
+    color: red;
+}
+.invisible2{
+    color: rgb(18, 4, 216);
+}
+.disable{
+    display: none;
+}
+.title{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100px;
+}
+.button_enter{
+    background: none;
+    padding: 5px 40px 5px 40px;
+}
+.button_enter:hover{
+
+    background: none;
+    border: 1px solid red;
+    padding: 5px 40px 5px 40px;
+}

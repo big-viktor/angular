@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="title" [ngClass]="{invisible2: visibilityTwo}" >
+        <div [ngClass]="{disable: include}">
+            <h2 [ngClass]="{invisible: visibility}">{{title}}</h2>
+        </div>
+       
+        <div>
+            <button (click)="onSave()" class="button_enter">Enter</button>
+        </div>
+    </div>
+    <div>
+        <h3>hidden text:{{text}}</h3>
+    </div>
+</div>
