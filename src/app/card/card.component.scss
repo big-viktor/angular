@@ -19,12 +19,13 @@
     height: 100px;
 }
 .button_enter{
+    color: rgb(247, 0, 255);
     background: none;
     padding: 5px 40px 5px 40px;
 }
 .button_enter:hover{
-
-    background: none;
+    background: rgba(255, 0, 0, 0.13);
     border: 1px solid red;
     padding: 5px 40px 5px 40px;
+    color: rgb(0, 102, 255);
 }

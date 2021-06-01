@@ -1,21 +1,30 @@
 import { stringify } from '@angular/compiler/src/util';
 import { Component, OnInit } from '@angular/core';
-import { interval } from 'rxjs';
+import { interval, Observable } from 'rxjs';
 
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.scss']
 })
+
 export class CardComponent implements OnInit {
   visibility : boolean = false;
   visibilityTwo: boolean = false;
   include: boolean = false;
   title = ''
   text = ''
-  palindrome = ["ANNA","2123olwq,e1",123456,"vaav",12345512,0,"abc0","uwq21o","awq12efr"];
-
+  palindrome = ["ANNA","2123olwq,e1",123456,"vaav",12345512,0,"abc0","uwq21o","awq12efr","sis","stats"];
+ 
   onSave(){
+    const secondsCounter = interval(3000);
+    // Subscribe to begin publishing values
+   secondsCounter.subscribe(() =>
+    this.ngOnInit()
+    );
+   
+  };
+  ngOnInit(){
     let randomstring = '';
     while (randomstring.length < 1) {
         this.title = randomstring += this.palindrome[Math.floor(Math.random() * this.palindrome.length)];
@@ -42,10 +51,6 @@ export class CardComponent implements OnInit {
       }else{
         this.visibility = false;
       }
-  };
-  ngOnInit(){
-  
-   
   }
   
 }
